@@ -46,7 +46,7 @@ export class UsersListComponent {
   }
 
   ngOnInit(): void {
-    //this.getUserList();
+    //this._userService.getUserList();
     this._userService.getUserList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
@@ -56,6 +56,17 @@ export class UsersListComponent {
       },
       error: console.log,
     });
+    this.paginatorIntl.itemsPerPageLabel = "Элементов на странице:";
+    this.paginatorIntl.nextPageLabel = "Следующая страница";
+    this.paginatorIntl.previousPageLabel = "Предыдущая страница";
+    this.paginatorIntl.getRangeLabel = (page: number, pageSize: number, length: number) => {
+      if (length === 0 || pageSize === 0) {
+        return `Отображено 0 из ${length}`;
+      }
+      const startIndex = page * pageSize + 1;
+      const endIndex = Math.min(startIndex + pageSize - 1, length);
+      return `Отображение ${startIndex} - ${endIndex} из ${length}`;
+    };
   }
 
   openUserAddEditForm() {
