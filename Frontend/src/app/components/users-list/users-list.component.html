@@ -1,0 +1,118 @@
+<mat-toolbar color="primary">
+  <span>Список пользователей</span>
+  <span class="example-spacer"></span>
+    <button (click)="openUserAddEditForm()" mat-raised-button>Новый пользователь</button>
+</mat-toolbar>
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Фильтр</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Поиск" #input autocomplete="off">
+    </mat-form-field>
+    <div class="div-table">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z0" matSort>
+
+        <!-- Contract No -->
+        <ng-container matColumnDef="contractNo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Номер договора </th>
+          <td mat-cell *matCellDef="let element"> {{element.contractNo}} </td>
+        </ng-container>
+
+        <!-- First Name -->
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Имя </th>
+          <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+
+        <!-- Second Name -->
+        <ng-container matColumnDef="secondName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Фамилия и Отчество </th>
+          <td mat-cell *matCellDef="let element"> {{element.secondName}} </td>
+        </ng-container>
+
+        <!-- Email -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <!-- Login -->
+        <ng-container matColumnDef="login">
+          <th mat-header-cell *matHeaderCellDef> Логин </th>
+          <td mat-cell *matCellDef="let element"> {{element.login}} </td>
+        </ng-container>
+
+        <!-- Password -->
+        <ng-container matColumnDef="passwordText">
+          <th mat-header-cell *matHeaderCellDef> Пароль </th>
+          <td mat-cell *matCellDef="let element"> {{element.passwordText}} </td>
+        </ng-container>
+
+        <!-- Country -->
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Страна </th>
+          <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+        </ng-container>
+
+        <!-- Department -->
+        <ng-container matColumnDef="department">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Подразделение </th>
+          <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+        </ng-container>
+
+        <!-- Course -->
+        <ng-container matColumnDef="course">
+          <th mat-header-cell *matHeaderCellDef> Курс </th>
+          <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+        </ng-container>
+
+        <!-- Passed -->
+        <ng-container matColumnDef="passed">
+          <th mat-header-cell *matHeaderCellDef> Пройден </th>
+          <td mat-cell *matCellDef="let element"> {{element.passed}} </td>
+        </ng-container>
+
+        <!-- Homework -->
+        <ng-container matColumnDef="homework">
+          <th mat-header-cell *matHeaderCellDef> ДЗ </th>
+          <td mat-cell *matCellDef="let element"> {{element.homework}} </td>
+        </ng-container>
+
+        <!-- Company -->
+        <ng-container matColumnDef="company">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Организация </th>
+          <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+        </ng-container>
+
+        <!-- Start Date -->
+        <ng-container matColumnDef="startDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Начало </th>
+          <td mat-cell *matCellDef="let element"> {{element.startDate | date:'dd.MM.yyyy'}} </td>
+        </ng-container>
+
+        <!-- End Date -->
+        <ng-container matColumnDef="endDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Конец </th>
+          <td mat-cell *matCellDef="let element"> {{element.endDate | date:'dd.MM.yyyy' }} </td>
+        </ng-container>
+
+        <!-- Actions -->
+        <!-- <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Редактировать/Удалить </th>
+          <td mat-cell *matCellDef="let element">
+            <mat-icon class="btnEdit" matTooltip="Редактировать {{element.login}}">edit</mat-icon>
+            <mat-icon class="btnDelete">delete</mat-icon>
+          </td>
+        </ng-container> -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <mat-paginator [length]="100"
+                   [pageSize]="10"
+                   [pageSizeOptions]="[5, 10, 25, 100]"
+                   aria-label="Select page">
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>

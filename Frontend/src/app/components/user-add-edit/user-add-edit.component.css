@@ -1,0 +1,57 @@
+.content {
+  padding-top: 10px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.action {
+  padding: 0px ;
+}
+
+.mat-form-field {
+  width: 100%; /* Устанавливаем фиксированную ширину для всех mat-form-field */
+}
+
+.row .mat-form-field.mat-datepicker {
+  width: auto; /* Устанавливаем ширину по содержимому для полей с датами */
+}
+
+.mat-form-field.date-field {
+  display: flex;
+  flex-direction: row; /* Располагаем элементы в строку */
+  align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.row .mat-form-field.date-field mat-label {
+  width: auto; /* Делаем метки "Назначен" и "Закончен" автоматической ширины */
+  margin-right: 10px; /* Добавляем небольшой отступ между меткой и полем */
+}
+
+.row .mat-form-field.date-field mat-datepicker-toggle {
+  margin-left: 5px; /* Добавляем небольшой отступ между полем и кнопкой выбора даты */
+}
+
+.department {
+  flex: 1;
+  width: 33%;
+}
+
+.withoutHW {
+  flex: 1;
+  width: 33%;
+}
+
+/* Стили для контейнера кнопок */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Равномерно распределяем пространство между кнопками */
+}
+
+/* Стили для кнопок */
+.action-button {
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 1; /* Равномерно распределяем пространство между кнопками */
+}

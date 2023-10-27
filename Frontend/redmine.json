@@ -1,0 +1,229 @@
+{
+  "users": [
+    {
+      "firstName": "test2",
+      "secondName": "test2",
+      "email": "test2@gmail.com",
+      "login": "test2",
+      "password": "",
+      "country": "CM",
+      "department": "Студенты",
+      "contractNo": "test2",
+      "course": "test2",
+      "passed": "yes",
+      "homework": "yes",
+      "company": "test2",
+      "startDate": "2023-09-16T21:00:00.000Z",
+      "endDate": "2023-09-23T21:00:00.000Z",
+      "id": 3
+    }
+    ],
+  "issue": [
+    {
+      "id": 1,
+      "project": {
+        "id": 1,
+        "name": "Учебные курсы"
+      },
+      "tracker": {
+        "id": 8,
+        "name": "Анкеты студентов"
+      },
+      "status": {
+        "id": 1,
+        "name": "Новая",
+        "is_closed": false
+      },
+      "priority": {
+        "id": 2,
+        "name": "Нормальный"
+      },
+      "author": {
+        "id": 1,
+        "name": "Alexander Levashov"
+      },
+      "subject": "1 1",
+      "description": null,
+      "start_date": "2023-10-07T21:00:00.000Z",
+      "due_date": null,
+      "done_ratio": 0,
+      "is_private": false,
+      "estimated_hours": null,
+      "total_estimated_hours": null,
+      "spent_hours": 0,
+      "total_spent_hours": 0,
+      "custom_fields": [
+        {
+          "id": 1,
+          "name": "Дата завершения",
+          "value": "2023-10-22T21:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "name": "Компания",
+          "value": "1"
+        },
+        {
+          "id": 3,
+          "name": "Логин",
+          "value": "1"
+        },
+        {
+          "id": 5,
+          "name": "Email клиента",
+          "value": "1"
+        },
+        {
+          "id": 8,
+          "name": "Оплата",
+          "value": "1"
+        },
+        {
+          "id": 10,
+          "name": "Пройден",
+          "value": "1"
+        },
+        {
+          "id": 11,
+          "name": "Курс",
+          "value": "Базовый"
+        },
+        {
+          "id": 12,
+          "name": "Дата семинара",
+          "value": "2023-10-07T21:00:00.000Z"
+        },
+        {
+          "id": 13,
+          "name": "Договор",
+          "value": "1"
+        },
+        {
+          "id": 14,
+          "name": "Без ДЗ",
+          "value": "1"
+        },
+        {
+          "id": 15,
+          "name": "Номер свидетельства",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "IspringIssues": [
+    {
+      "userProfile": [
+        {
+          "id": "",
+          "userId": "",
+          "role": [
+            "learner"
+          ],
+          "roleId": [
+            ""
+          ],
+          "departmentId": "Диллеры",
+          "status": [
+            "1"
+          ],
+          "fields": [
+            {
+              "field": [
+                {
+                  "name": [
+                    "login"
+                  ],
+                  "value": "1"
+                },
+                {
+                  "name": [
+                    "email"
+                  ],
+                  "value": "1"
+                },
+                {
+                  "name": [
+                    "first_name"
+                  ],
+                  "value": "1"
+                },
+                {
+                  "name": [
+                    "last_name"
+                  ],
+                  "value": "1"
+                },
+                {
+                  "name": [
+                    "country_id"
+                  ],
+                  "value": "RU"
+                },
+                {
+                  "name": [
+                    "phone"
+                  ],
+                  "value": ""
+                },
+                {
+                  "name": [
+                    "job_title"
+                  ],
+                  "value": ""
+                },
+                {
+                  "name": [
+                    "about_me"
+                  ],
+                  "value": ""
+                },
+                {
+                  "name": [
+                    "password"
+                  ],
+                  "value": ""
+                }
+              ]
+            }
+          ],
+          "addedDate": [
+            null
+          ],
+          "userRoles": [
+            {
+              "userRole": [
+                {
+                  "roleId": [
+                    ""
+                  ],
+                  "roleType": [
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "lastLoginDate": [
+            null
+          ],
+          "subordination": [
+            {
+              "subordinationType": [
+                "no_supervisor"
+              ]
+            }
+          ],
+          "coSubordination": [
+            {
+              "subordinationType": [
+                "no_supervisor"
+              ]
+            }
+          ]
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

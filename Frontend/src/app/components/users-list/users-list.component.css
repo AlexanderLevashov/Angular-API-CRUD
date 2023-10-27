@@ -1,0 +1,21 @@
+span {
+  margin-right: auto;
+}
+
+span {
+  margin-right: auto;
+}
+
+button {
+  margin-left: auto;
+  width: auto;
+}
+
+mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.div-table {
+  overflow-x: auto;
+}
